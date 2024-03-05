@@ -24,6 +24,8 @@ int main()
 	int r1,r2;
 	printf("enter the rows to be interchanged : ");
 	scanf("%d  %d",&r1,&r2);
+	r1--;
+	r2--;
 	int temp,k;
 	for(k=0;k<m;k++)	
 	{
