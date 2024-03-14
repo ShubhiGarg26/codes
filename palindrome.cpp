@@ -4,8 +4,7 @@ int main()
 {
 	char a[100],b[100],temp;
 	gets(a);
-	int l,i,j;
-	l=strlen(a);
+	int l,i,j,k;
 	for(i=0;a[i]!=0;i++)
 	{
 		for(j=i+1;a[j]!='\0';j++)
@@ -19,24 +18,7 @@ int main()
 		}
 	}
 	printf("%s\n",a);
-	for(i=l-1,j=0;i>0,j<l;i--,j++)
-	{
-		b[j]=a[i];
-	}
-	b[j]='\0';
-	int k=0;
-    for(i=0;b[i];i++)
-    {
-     	b[i]=b[i+k];
- 
-     	
-     	if(b[i]==' '|| b[i]=='\t')
-     	{
-		  k++;
-		  i--;
-	    }
-	}
-     k=0;
+	k=0;
 	for(i=0;a[i];i++)
     {
      	a[i]=a[i+k];
@@ -48,6 +30,12 @@ int main()
 		  i--;
 	    }
     }
+    l=strlen(a);
+	for(i=l-1,j=0;i>0,j<l;i--,j++)
+	{
+		b[j]=a[i];
+	}
+	b[j]='\0';
 	printf("%s\n",b);
 	int f=strcmp(a,b);
 	printf("%d",f);
